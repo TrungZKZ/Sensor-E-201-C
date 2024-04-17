@@ -1,21 +1,38 @@
 
 // Get a database reference 
 const databasepHvalue = database.ref('DoAn/pH');
+const databasepHvalue1 = database.ref('DoAn/pH1');
+const databasepHvalue2 = database.ref('DoAn/pH2');
+const databasepHvalue3 = database.ref('DoAn/pH3');
+const databasepHvalue4 = database.ref('DoAn/pH4');
 
 const databasecheck = database.ref('DoAn/Check/check');
 
 const databasepHstatus = database.ref('DoAn/pHstatus');
+const databasepHstatus1 = database.ref('DoAn/pHstatus1');
+const databasepHstatus2 = database.ref('DoAn/pHstatus2');
+const databasepHstatus3 = database.ref('DoAn/pHstatus3');
+const databasepHstatus4 = database.ref('DoAn/pHstatus4');
 
 const databaserun = database.ref('DoAn/Run/run');
 
 
 // Variables to save database current values
 var pHValue;
+var checkpH;
 var pHvalueReading;
+var pHvalueReading1;
+var pHvalueReading2;
+var pHvalueReading3;
+var pHvalueReading4;
 
 var checkReading;
 
 var pHstatusReading;
+var pHstatusReading1;
+var pHstatusReading2;
+var pHstatusReading3;
+var pHstatusReading4;
 
 var runReading;
 
@@ -23,7 +40,6 @@ var runReading;
 databasepHvalue.on('value', (snapshot) => {
     pHvalueReading = snapshot.val();
     pHValue = pHvalueReading;
-    console.log(pHvalueReading);
     let color;
     if (pHValue < 1) {
         color = "#cc0000"; // 1
@@ -48,6 +64,13 @@ databasepHvalue.on('value', (snapshot) => {
     } else {
         color = "#330066"; // 11
     }
+    checkpH = pHvalueReading;
+    if (checkpH >= 6.5 && checkpH <= 8.5) {
+        document.getElementById("check").innerHTML = "AN TOÀN";
+        document.getElementById("check").style.color = "green";
+    } else {
+        document.getElementById("check").innerHTML = "CẨN THẬN";
+        document.getElementById("check").style.color = "red";}
     document.getElementById("square").style.backgroundColor = color;
     document.getElementById("reading-pHvalue").innerHTML = pHvalueReading.toFixed(2);
    }, (errorObject) => {
@@ -56,7 +79,6 @@ databasepHvalue.on('value', (snapshot) => {
 //---------------------------------------------------------------------------//
 databasecheck.on('value', (snapshot) => {
     checkReading = snapshot.val();
-    console.log(checkReading);
     document.getElementById("reading-check").innerHTML = checkReading;
    }, (errorObject) => {
     console.log('The read failed: ' + errorObject.name);
@@ -71,9 +93,6 @@ databasepHstatus.on('value', (snapshot) => {
    });
 //---------------------------------------------------------------------------//
 
-////////////////////////// nhận Relay từ database //////////////////////////////
-
-//////////////////////// Nhận giá trị từ slider///////////////////////////////
 
 /////////////////////////// hiển thị thời gian ////////////////////////////////
 setInterval(myTimer, 1000);
@@ -118,4 +137,21 @@ function SetRelay(relayid) {
     }
     return firebase.database().ref().update(updates);
 }
-////////////////////////////// UpdateColor /////////////////////////////////////
+////////////////////////////// Nhận history /////////////////////////////////////
+databasepHvalue1.on('value', (snapshot) => {pHvalueReading1 = snapshot.val();
+document.getElementById("reading-pHvalue1").innerHTML = pHvalueReading1.toFixed(2);});
+databasepHvalue2.on('value', (snapshot) => {pHvalueReading2 = snapshot.val();
+document.getElementById("reading-pHvalue2").innerHTML = pHvalueReading2.toFixed(2);});
+databasepHvalue3.on('value', (snapshot) => {pHvalueReading3 = snapshot.val();
+document.getElementById("reading-pHvalue3").innerHTML = pHvalueReading3.toFixed(2);});
+databasepHvalue4.on('value', (snapshot) => {pHvalueReading4 = snapshot.val();
+document.getElementById("reading-pHvalue4").innerHTML = pHvalueReading4.toFixed(2);});
+
+databasepHstatus1.on('value', (snapshot) => {pHstatusReading1 = snapshot.val();
+document.getElementById("reading-pHstatus1").innerHTML = pHstatusReading1;});
+databasepHstatus2.on('value', (snapshot) => {pHstatusReading2 = snapshot.val();
+document.getElementById("reading-pHstatus2").innerHTML = pHstatusReading2;});
+databasepHstatus3.on('value', (snapshot) => {pHstatusReading3 = snapshot.val();
+document.getElementById("reading-pHstatus3").innerHTML = pHstatusReading3;});
+databasepHstatus4.on('value', (snapshot) => {pHstatusReading4 = snapshot.val();
+document.getElementById("reading-pHstatus4").innerHTML = pHstatusReading4;});
