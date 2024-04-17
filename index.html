@@ -120,20 +120,20 @@ console.log(errorMessage);
           <div class="container">
               <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
                   <p>__pH__</p>
-                  <h2>💦 </h2>
+                  <h2>💧</h2>
 
               </div>
               
                   <div style=" margin-left: auto; margin-right: auto;" class="col-lg-6 wow fadeInUp" data-wow-delay="0.0s">
                       <div class="team-item">
                           <div class="team-img" >
-                            <div id="square"></div>
+                            <div id="square"> </div>
                           </div>
                           <div class="team-text">
 
                               <h2>pH : <span id="reading-pHvalue"></span></h2>
                               <h2><span id="reading-pHstatus"></span></h2>
-
+                              <b><span id="check"></span></b>
                               <div class="team-social">
                                   <a class="btn" onclick="SetRelay(1)"><i class="fa fa-tint"></i></a>
                               </div>
@@ -141,11 +141,42 @@ console.log(errorMessage);
                           </div>
                       </div>
                   </div>
-              
+                  
           </div>
       </div>
       <!-- Main End -->
+      <table style=" width: 500px;margin-left: auto; margin-right: auto;color: #ffffff;border: 2px solid white;">
+        <tr align="center">
+            <th ></th>
+          <th >pH</th>
+          
+          <th >Status</th>
+        </tr>
+        <tr align="center">
+            <td>1</td>
+          <td><span id="reading-pHvalue1"></span></td>
 
+          <td><span id="reading-pHstatus1"></span></td>
+        </tr>
+        <tr align="center">
+            <td>2</td>
+            <td><span id="reading-pHvalue2"></span></td>
+ 
+            <td><span id="reading-pHstatus2"></span></td>
+        </tr>
+        <tr align="center">
+            <td>3</td>
+            <td><span id="reading-pHvalue3"></span></td>
+
+            <td><span id="reading-pHstatus3"></span></td>
+          </tr>
+          <tr align="center">
+            <td>4</td>
+            <td><span id="reading-pHvalue4"></span></td>
+ 
+            <td><span id="reading-pHstatus4"></span></td>
+          </tr>
+      </table>
               <!-- Footer Start -->
               <div class="footer wow fadeIn" data-wow-delay="0.3s">
                 <div class="container-fluid">
