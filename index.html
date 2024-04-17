@@ -42,6 +42,7 @@
     };
     firebase.initializeApp(firebaseConfig);
      var database = firebase.database();
+
 </script>
 
 <script>
@@ -61,18 +62,19 @@ console.log(errorMessage);
 
 <script src="app.js" defer></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style media="screen"></style>
+<style media="screen">
+
+</style>
 
 </head>
 
 <link rel="shortcut icon" type="image/ico" href="/favicon.ico"/>
 <div id="message">
 <body onload="animate_string()" data-spy="scroll" data-target=".navbar" data-offset="51">
-  <marquee id = "welcome"></p></marquee>
           <!-- Nav Bar Start -->
           <div class="navbar navbar-expand-lg bg-light navbar-light">
             <div class="container-fluid">
-                <a href="index.html" class="navbar-brand"><p id="demo">💐😸</p></a>
+                <a href="index.html" class="navbar-brand"><p id="demo"></p></a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -93,10 +95,10 @@ console.log(errorMessage);
                           <div class="col-sm-12 col-md-6">
                               <div class="hero-content">
                                   <div class="hero-text">
-                                      <p>Nhóm 11</p>
-                                      <h1>Giám sát cây cảnh văn phòng</h1>
+                                      <h1>Kiểm tra</h1>
+                                      <h1>Nồng độ pH</h1>
                                       <h2></h2>
-                                      <div class="typed-text">Nguyễn Hoàng Khiêm, Lê Thành Trung, Lê Phú NHuận, Lê Minh Nhựt, Nguyễn Thành Nhân, Bùi Tấn Đạt</div>
+                                      <div class="typed-text">Nguyễn Văn Duy Tân, B2012463</div>
                                   </div>
                                   <div class="hero-btn">
                                   </div>
@@ -104,7 +106,7 @@ console.log(errorMessage);
                           </div>
                           <div class="col-sm-12 col-md-6 d-none d-md-block">
                               <div class="hero-image">
-                                  <img src="img/ABUIABACGAAgnuih8AUo4KagzwUw0Bc4wB8.jpg" alt="Hero Image">
+                                  <img src="img/fwdadsefwdsxa.jpg" alt="Hero Image">
                               </div>
                           </div>
                       </div>
@@ -117,81 +119,29 @@ console.log(errorMessage);
         <div class="team" id="team">
           <div class="container">
               <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                  <p>Độ Ẩm</p>
-                  <h2>🌳</h2>
+                  <p>__pH__</p>
+                  <h2>💦 </h2>
+
               </div>
-              <div class="row">
-                  <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.0s">
+              
+                  <div style=" margin-left: auto; margin-right: auto;" class="col-lg-6 wow fadeInUp" data-wow-delay="0.0s">
                       <div class="team-item">
-                          <div class="team-img">
-                              <img src="img/Hình-ảnh-về-hoa-cỏ-may-đẹp-5.jpg" alt="Image">
+                          <div class="team-img" >
+                            <div id="square"></div>
                           </div>
                           <div class="team-text">
-                              <h2><span id="reading-doam1"></span>%</h2>
-                              <h4>Ngọn Cỏ Ven Đường</h4>
 
-
-                              <div class="team-social">
-                                  <a class="btn" onclick="newData(1)"><i class="fa fa-tint"></i></a>
-                                  <input type="range" min="0" max="100" value="15" class="slider" id="myRange1">
-                              </div>
-                              <p align="right"><span id="giatri1"></span>% <button class="button button2" onclick="SetRelay(1)">ĐẶT</button></p>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
-                      <div class="team-item">
-                          <div class="team-img">
-                              <img src="img/Rau_càng_cua.jpg" alt="Image">
-                          </div>
-                          <div class="team-text">
-                            <h2><span id="reading-doam2"></span>%</h2>
-                              <h4>Quỷ Châm Thảo</h4>
-                        
-                              <div class="team-social">
-                                  <a class="btn" onclick="newData(2)"><i class="fa fa-tint"></i></a>
-                                  <input type="range" min="0" max="100" value="15" class="slider" id="myRange2">
-                              </div>
-                              <p align="right"><span id="giatri2"></span>% <button class="button button2" onclick="SetRelay(2)">ĐẶT</button></p>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
-                      <div class="team-item">
-                          <div class="team-img">
-                              <img src="img/cay-cut-lon-1.jpg" alt="Image">
-                          </div>
-                          <div class="team-text">
-                            <h2><span id="reading-doam3"></span>%</h2>
-                              <h4>Thắng Hồng Kế</h4>
-                         
-                              <div class="team-social">
-                                  <a class="btn" onclick="newData(3)"><i class="fa fa-tint"></i></a>
-                                  <input type="range" min="0" max="100" value="15" class="slider" id="myRange3">
-                              </div>
-                              <p align="right"><span id="giatri3"></span>% <button class="button button2" onclick="SetRelay(3)">ĐẶT</button></p>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.6s">
-                      <div class="team-item">
-                          <div class="team-img">
-                              <img src="img/OIP (1).jpg" alt="Image">
-                          </div>
-                          <div class="team-text">
-                            <h2><span id="reading-doam4"></span>%</h2>
-                              <h4>Diệp Hạ Châu</h4>
+                              <h2>pH : <span id="reading-pHvalue"></span></h2>
+                              <h2><span id="reading-pHstatus"></span></h2>
 
                               <div class="team-social">
-                                  <a class="btn" onclick="newData(4)"><i class="fa fa-tint"></i></a>
-                                  <input type="range" min="0" max="100" value="reading-relay4" class="slider" id="myRange4">
+                                  <a class="btn" onclick="SetRelay(1)"><i class="fa fa-tint"></i></a>
                               </div>
-                              <p align="right"><span id="giatri4"></span>% <button class="button button2" onclick="SetRelay(4)">ĐẶT</button></p>
-                              
+                              <p align="right"><button class="button button2" onclick="SetRelay(2)">AUTO</button></p>
                           </div>
                       </div>
                   </div>
-              </div>
+              
           </div>
       </div>
       <!-- Main End -->
@@ -201,11 +151,11 @@ console.log(errorMessage);
                 <div class="container-fluid">
                     <div class="container">
                         <div class="footer-info">
-                            <h2>Đồ Án IOT</h2>
+                            <h2>Đồ Án Điện Tử Căn Bản</h2>
                             <h3></h3>
                             <div class="footer-menu">
                                 <p>Giáo viên</p>
-                                <p>Nguyễn Văn Khanh</p>
+                                <p>Nguyễn Chí Ngôn</p>
                             </div>
                             <div class="footer-social">
                             </div>
@@ -213,13 +163,16 @@ console.log(errorMessage);
                         </div>
                     </div>
                     <div class="container copyright">
-                        <a href="https://trungzkz.github.io/7013n/"><i class="fa fa-gamepad"></i></i></a>
-                        <a href="https://console.firebase.google.com/u/0/project/test-zkz/database/test-zkz-default-rtdb/data"><i class="fa fa-database"></i></i></a>
+                        <a href="https://doaniot-bc245-default-rtdb.firebaseio.com"><i class="fa fa-database"></i></i></a>
                     </div>
                 </div>
             </div>
             <!-- Footer End -->
                   <!-- JavaScript Libraries -->
+<script>
+
+</script>
+
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
         <script src="lib/easing/easing.min.js"></script>
